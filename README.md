@@ -105,13 +105,56 @@ Click the "Export to Excel" button to download user and task data. The Excel fil
 Screenshots
 
 Figure 1: Add User Form
+![Screenshot (202)](https://github.com/user-attachments/assets/aecad153-c773-4d7e-b99f-ec60953c8569)
 
 Figure 2: Add Task Form
+![Screenshot (201)](https://github.com/user-attachments/assets/d707ba6b-4dd0-4a2e-96cf-4e7a59d03c33)
 
 Figure 3: User List with Pagination
+![Screenshot (200)](https://github.com/user-attachments/assets/8e1f424b-391a-4a19-b76d-d09c3e8f25eb)
 
 Figure 4: Task List with User Assignments
+![Screenshot (199)](https://github.com/user-attachments/assets/1117f910-97c3-4c86-9a75-efb09e39634a)
 Contributing
+
+<h3>Some useful commands</h3>
+<h4>In Laravel, you can use the Artisan command-line tool to create various components of your application, such as models, controllers, views, migrations, and more. Here are some important Artisan commands to create files in a Laravel application: </h4>
+
+<h5>You can list all available Artisan commands by running:
+php artisan list</h5>
+
+<ol>
+    <li> Create a Model
+php artisan make:model ModelName</li>
+    
+<li>Create a Controller
+php artisan make:controller ControllerName</li>
+
+<li> Create a Migration
+php artisan make:migration create_table_name</li>
+
+<li> Create a Request
+php artisan make:request RequestName</li>
+
+<li> Create a Seeder
+php artisan make:seeder SeederName</li>
+
+<li> Create a Factory
+php artisan make:factory FactoryName</li>
+
+<li> Create a Middleware
+php artisan make:middleware MiddlewareName</li>
+
+<li> Create a Policy
+php artisan make:policy PolicyName</li>
+
+<li>Create a Command
+php artisan make:command CommandName</li>
+
+<li>Create a View
+While there is no specific Artisan command to create a view file, you can manually create a view file in the resources/views directory. For example:
+touch resources/views/viewName.blade.php</li> 
+</ol>
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
