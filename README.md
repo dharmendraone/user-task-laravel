@@ -155,8 +155,15 @@ php artisan make:command CommandName</li>
 While there is no specific Artisan command to create a view file, you can manually create a view file in the resources/views directory. For example:
 touch resources/views/viewName.blade.php</li> 
 </ol>
+
+
+
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
 Thank you for using our Simple Web App for User and Task Management. We hope it meets your needs effectively! If you have any questions or feedback, feel free to reach out.
+
 If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via taylor@laravel.com. All security vulnerabilities will be promptly addressed.
