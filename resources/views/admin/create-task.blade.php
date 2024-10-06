@@ -1,35 +1,45 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Create Task</h1>
-    <form method="POST" action="{{ route('admin.tasks.store') }}" id="create-task-form">
-        @csrf
-        <div>
-            <label for="user_id">User  :</label>
-            <select id="user_id" name="user_id" required>
-                @foreach($users as $user)
-                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                @endforeach
-            </select>
-            <span class="error" id="user_id-error"></span>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Create Task</div>
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('admin.tasks.store') }}" id="create-task-form">
+                            @csrf
+                            <div class="form-group">
+                                <label for="user_id">User :</label>
+                                <select id="user_id" name="user_id" class="form-control" required>
+                                    @foreach($users as $user)
+                                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                    @endforeach
+                                </select>
+                                <span class="error" id="user_id-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="task_detail">Task Detail:</label>
+                                <textarea id="task_detail" name="task_detail" class="form-control" required></textarea>
+                                <span class="error" id="task_detail-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="task_type">Task Type:</label>
+                                <input type="text" id="task_type" name="task_type" class="form-control" required>
+                                <span class="error" id="task_type-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="task_status">Task Status:</label>
+                                <input type="text" id="task_status" name="task_status" class="form-control" required>
+                                <span class="error" id="task_status-error"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Task</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-            <label for="task_detail">Task Detail:</label>
-            <textarea id="task_detail" name="task_detail" required></textarea>
-            <span class="error" id="task_detail-error"></span>
-        </div>
-        <div>
-            <label for="task_type">Task Type:</label>
-            <input type="text" id="task_type" name="task_type" required>
-            <span class="error" id="task_type-error"></span>
-        </div>
-        <div>
-            <label for="task_status">Task Status:</label>
-            <input type="text" id="task_status" name="task_status" required>
-            <span class="error" id="task_status-error"></span>
-        </div>
-        <button type="submit">Create Task</button>
-    </form>
+    </div>
 
     <script>
         $(document).ready(function() {
